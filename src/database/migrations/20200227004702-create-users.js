@@ -11,6 +11,10 @@ module.exports = {
         type: Sequelize.STRING(128),
         allowNull: false,
       },
+      email: {
+        type: Sequelize.STRING(128),
+        allowNull: false,
+      },
       password_hash: {
         type: Sequelize.STRING(64),
         allowNull: false,
@@ -30,7 +34,7 @@ module.exports = {
       },
       deleted_at: {
         type: Sequelize.DATE,
-        allowNull: false,
+        allowNull: true,
       },
     });
   },
