@@ -4,11 +4,11 @@ import User from '../models/User';
 class UserController {
   async store(req, res) {
     const schema = Yup.object().shape({
-      name: Yup.string().required(),
-      email: Yup.string()
+      name: Yup.string(128).required(),
+      email: Yup.string(128)
         .email()
         .required(),
-      password: Yup.string()
+      password: Yup.string(64)
         .required()
         .min(6),
     });
